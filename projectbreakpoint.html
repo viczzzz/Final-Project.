@@ -1,0 +1,191 @@
+
+<!--WORKING VERSION -->
+<html>  
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+
+<title>Human Dress Up</title>
+
+
+
+
+
+<link rel= "stylesheet" type="text/css" href="breakpoint.css">
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+
+  
+
+</head>
+
+
+
+<body>
+
+<div class="wrapper">
+
+  <<iframe width="560" height="315" src="https://www.youtube.com/embed/CQcOmHphL-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class = "video"></iframe>
+
+  <div class="btn_container">
+
+<!-- 
+<iframe width = "0" height="0" src="https://www.youtuberepeater.com/watch?v=GuJQSAiODqI&name=Madonna+Vogue" frameborder="0" allowfullscreen></iframe> -->
+
+
+
+<h2>Choose a hairstyle</h2>
+
+<br/>
+
+<label for="seleclength"> Choose the length: </label>:
+
+  <select id="selectlength" name="selectlength" onchange="populateHair(event,this.id,'selectcolor1')">
+
+    <option value=""></option>
+
+    <option value="Long">Long</option>
+
+    <option value="Medium">Medium</option>
+
+    <option value="Short">Short</option>
+
+  </select>
+
+<br/>
+
+  <label for="selectcolor1">Choose the color:</label>
+
+  <select disabled id="selectcolor1" name="selectlength"></select>
+
+  <div class=hairstyle_div> 
+
+    <div class="long">
+      <img hidden class = 'blonde' src = "hair\blonde_long.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'brown' src = "hair\brown_long.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'black' src = "hair\black_long.png " style="position: absolute" style="width: 50%">
+      <img hidden class = 'red' src = "hair\red_long.png " style="position: absolute" style="width: 50%">
+    </div>
+
+
+    <div class="medium">
+      <img hidden class = 'blonde' src = "hair\blonde_medium.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'brown' src = "hair\brown_medium.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'black' src = "hair\black_medium.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'red' src = "hair\red_medium.png" style="position: absolute" style="width: 50%">
+    </div>
+
+
+    <div class="short">
+      <img hidden class = 'blonde' src = "hair\blonde_short.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'brown' src = "hair\brown_short.png " style="position: absolute" style="width: 50%">
+      <img hidden class = 'black' src = "hair\black_short.png" style="position: absolute" style="width: 50%">
+      <img hidden class = 'red' src = "hair\red_short.png" style="position: absolute" style="width: 50%">
+    </div>
+
+
+
+
+  </div>
+
+
+
+<h2>Items</h2>
+
+<br />
+
+  <label for="selectitem">Choose an Item:</label>
+
+  <select id="selectitem" name="selectitem" onchange="populateItems(this.id,'selectcolor2')">
+
+    <option value=""></option>
+
+    <option value="Tops">Tops</option>
+
+    <option value="Skirts">Skirts</option>
+
+    <option value="Dresses">Dresses</option>
+
+  </select>
+
+<br />
+
+    <label for="selectcolor2">Choose the color:</label>
+
+    <select disabled id="selectcolor2" name="selectcolor2"></select>
+
+    <br />
+
+    <div id="div2" style="display: none;">Submitted</div>
+
+    <form name="test_form" action="#">
+
+      <input type="submit" onclick="showDiv();" value="Submit" style="float: left" />
+
+    </form>
+
+</div>
+
+<br />
+
+
+
+<div class = 'character_div'>
+
+ <img id = "Robot" src="img\rob.png" style="width: 40%"/> 
+
+
+
+</div>
+
+
+
+<div class = 'items_div'>
+
+
+  <div class="tops">
+    <img hidden class = 'grey' src = "clothes\GreyTop.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'blue' src = "clothes\BlueTop.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'red' src = "clothes\RedTop.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'black' src = "clothes\BlackBody.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'yellow' src = "clothes\YellowTop.png" style="position: absolute" style="width: 50%">
+  </div>
+  
+  
+
+  <div class="dresses">
+    <img hidden class = 'blue' src = "clothes\BlueDress.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'black' src = "clothes/BlackDress.png" style="position: absolute" style="width: 50%">
+    <img hidden class = 'rainbow' src = "clothes\RainbowDress.png" style="position: absolute" style="width: 50%">
+  </div>
+
+  
+
+<div class="skirts">
+  <img hidden class = 'darkblue' src = "clothes\DarkBlue.png" style="position: absolute" style="width: 50%">
+  <img hidden class = 'burgundy' src = "clothes\BurgundySkirt.png" style="position: absolute" style="width: 50%">
+  <img hidden class = 'black' src = "clothes\BlackSkirt.png" style="position: absolute" style="width: 50%">
+  <img hidden class = 'red' src = "clothes\RedSkirt.png" style="position: absolute" style="width: 50%">
+ </div>
+
+  
+
+
+  
+
+</div>
+
+</body>
+
+<script src="selectbuttonforitems.js"></script>
+
+<script src="hairbutton.js"></script>
+
+<script src="submitbutton.js"></script>
+
+
+
+
+
+</html>
